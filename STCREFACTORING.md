@@ -1,5 +1,7 @@
 # Refactoring Plan: Shifting "Generate Summary" to Creative Orientation
 
+**Note**: This plan has been largely implemented. The `generate_summary` tool and related components now reflect the creative orientation principles outlined below.
+
 ## 1. Current State of `generate_summary`
 
 The current `generate_summary` tool provides an overview of the thinking process primarily focused on the progression through predefined problem-solving-orientation stages. It does not support at all the creative-orientation.
