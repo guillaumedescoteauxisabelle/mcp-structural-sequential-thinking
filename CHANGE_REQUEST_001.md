@@ -10,7 +10,7 @@ The root cause is hypothesized to be an internal malfunction within the polycent
 
 ## 3. Proposed Solution / Action Items for Implementation Agent
 
-The implementation agent should investigate and rectify the task coordination and assignment module within the `mcp_coaia_sequential_thinking` package (specifically, within `mcp_coaia_sequential_thinking/polycentric_lattice.py` and related files).
+The implementation agent should investigate and rectify the task coordination and assignment module within the `mcp_structural_sequential_thinking` package (specifically, within `mcp_structural_sequential_thinking/polycentric_lattice.py` and related files).
 
 **Specific areas of focus:**
 

@@ -4,8 +4,8 @@ import json
 import os
 from pathlib import Path
 
-from mcp_sequential_thinking.models import ThoughtStage, ThoughtData
-from mcp_sequential_thinking.storage import ThoughtStorage
+from mcp_structural_sequential_thinking.models import ThoughtStage, ThoughtData
+from mcp_structural_sequential_thinking.storage import ThoughtStorage
 
 
 class TestThoughtStorage(unittest.TestCase):
@@ -27,7 +27,7 @@ class TestThoughtStorage(unittest.TestCase):
             thought_number=1,
             total_thoughts=3,
             next_thought_needed=True,
-            stage=ThoughtStage.PROBLEM_DEFINITION
+            stage=ThoughtStage.CURRENT_REALITY
         )
         
         self.storage.add_thought(thought)
@@ -53,7 +53,7 @@ class TestThoughtStorage(unittest.TestCase):
             thought_number=1,
             total_thoughts=3,
             next_thought_needed=True,
-            stage=ThoughtStage.PROBLEM_DEFINITION
+            stage=ThoughtStage.CURRENT_REALITY
         )
         
         thought2 = ThoughtData(
@@ -61,7 +61,7 @@ class TestThoughtStorage(unittest.TestCase):
             thought_number=2,
             total_thoughts=3,
             next_thought_needed=True,
-            stage=ThoughtStage.RESEARCH
+            stage=ThoughtStage.PATTERN_RECOGNITION
         )
         
         self.storage.add_thought(thought1)
@@ -80,7 +80,7 @@ class TestThoughtStorage(unittest.TestCase):
             thought_number=1,
             total_thoughts=3,
             next_thought_needed=True,
-            stage=ThoughtStage.PROBLEM_DEFINITION
+            stage=ThoughtStage.CURRENT_REALITY
         )
         
         thought2 = ThoughtData(
@@ -88,7 +88,7 @@ class TestThoughtStorage(unittest.TestCase):
             thought_number=2,
             total_thoughts=3,
             next_thought_needed=True,
-            stage=ThoughtStage.RESEARCH
+            stage=ThoughtStage.PATTERN_RECOGNITION
         )
         
         thought3 = ThoughtData(
@@ -96,15 +96,15 @@ class TestThoughtStorage(unittest.TestCase):
             thought_number=3,
             total_thoughts=3,
             next_thought_needed=False,
-            stage=ThoughtStage.PROBLEM_DEFINITION
+            stage=ThoughtStage.CURRENT_REALITY
         )
         
         self.storage.add_thought(thought1)
         self.storage.add_thought(thought2)
         self.storage.add_thought(thought3)
         
-        problem_def_thoughts = self.storage.get_thoughts_by_stage(ThoughtStage.PROBLEM_DEFINITION)
-        research_thoughts = self.storage.get_thoughts_by_stage(ThoughtStage.RESEARCH)
+        problem_def_thoughts = self.storage.get_thoughts_by_stage(ThoughtStage.CURRENT_REALITY)
+        research_thoughts = self.storage.get_thoughts_by_stage(ThoughtStage.PATTERN_RECOGNITION)
         
         self.assertEqual(len(problem_def_thoughts), 2)
         self.assertEqual(problem_def_thoughts[0], thought1)
@@ -120,7 +120,7 @@ class TestThoughtStorage(unittest.TestCase):
             thought_number=1,
             total_thoughts=3,
             next_thought_needed=True,
-            stage=ThoughtStage.PROBLEM_DEFINITION
+            stage=ThoughtStage.CURRENT_REALITY
         )
         
         self.storage.add_thought(thought)
@@ -142,7 +142,7 @@ class TestThoughtStorage(unittest.TestCase):
             thought_number=1,
             total_thoughts=2,
             next_thought_needed=True,
-            stage=ThoughtStage.PROBLEM_DEFINITION
+            stage=ThoughtStage.CURRENT_REALITY
         )
         
         thought2 = ThoughtData(
@@ -150,7 +150,7 @@ class TestThoughtStorage(unittest.TestCase):
             thought_number=2,
             total_thoughts=2,
             next_thought_needed=False,
-            stage=ThoughtStage.CONCLUSION
+            stage=ThoughtStage.DESIRED_OUTCOME
         )
         
         self.storage.add_thought(thought1)

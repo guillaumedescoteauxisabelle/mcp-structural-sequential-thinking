@@ -9,11 +9,11 @@ import os
 import time
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-from mcp_coaia_sequential_thinking.polycentric_lattice import (
+from mcp_structural_sequential_thinking.polycentric_lattice import (
     ConstitutionalAgent, AnalysisAgent, agent_registry, AgentRole, MessageType, MessagePriority
 )
-from mcp_coaia_sequential_thinking.agent_coordination import task_coordinator, TaskType
-from mcp_coaia_sequential_thinking.constitutional_core import constitutional_core
+from mcp_structural_sequential_thinking.agent_coordination import task_coordinator, TaskType
+from mcp_structural_sequential_thinking.constitutional_core import constitutional_core
 
 
 def test_agent_creation_and_registration():

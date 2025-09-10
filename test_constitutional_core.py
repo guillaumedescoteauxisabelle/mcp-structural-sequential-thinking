@@ -8,7 +8,7 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-from mcp_coaia_sequential_thinking.constitutional_core import constitutional_core, ConstitutionalPrinciple
+from mcp_structural_sequential_thinking.constitutional_core import constitutional_core, ConstitutionalPrinciple
 
 
 def test_constitutional_validation():

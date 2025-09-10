@@ -1,7 +1,7 @@
 [project]
-name = "mcp-coaia-sequential-thinking"
+name = "mcp-structural-sequential-thinking"
 version = "0.3.0"
-description = "CoAiA's Structural Core: Guiding Intelligent Agents with Foundational Creative Thinking"
+description = "CoAiA's Structural Core: Guiding Intelligent Agents with Foundational Creative/Stuctural Thinking"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [project.scripts]
-mcp-coaia-sequential-thinking = "mcp_coaia_sequential_thinking.wrapper:main"
+mcp-structural-sequential-thinking = "mcp_structural_sequential_thinking.wrapper:main"
 
 [project.optional-dependencies]
 dev = [
@@ -48,7 +48,7 @@ all = [
 Source = "https://github.com/miadisabelle/mcp-coaia-sequential-thinking"
 
 [tool.hatch.build.targets.wheel]
-packages = ["mcp_coaia_sequential_thinking"]
+packages = ["mcp_structural_sequential_thinking"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

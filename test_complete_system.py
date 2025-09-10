@@ -13,12 +13,12 @@ import time
 from datetime import datetime
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-from mcp_coaia_sequential_thinking.constitutional_core import constitutional_core, ConstitutionalPrinciple
-from mcp_coaia_sequential_thinking.polycentric_lattice import (
+from mcp_structural_sequential_thinking.constitutional_core import constitutional_core, ConstitutionalPrinciple
+from mcp_structural_sequential_thinking.polycentric_lattice import (
     agent_registry, ConstitutionalAgent, AnalysisAgent, MessagePriority
 )
-from mcp_coaia_sequential_thinking.agent_coordination import task_coordinator, TaskType
-from mcp_coaia_sequential_thinking.resilient_connection import (
+from mcp_structural_sequential_thinking.agent_coordination import task_coordinator, TaskType
+from mcp_structural_sequential_thinking.resilient_connection import (
     resilient_connection, ExplorationMode, DiscoveryType, NoveltySearchAgent
 )
 

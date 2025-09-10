@@ -63,7 +63,7 @@ Russell, S. J., & Norvig, P. (2003). Artificial intelligence: A modern approach.
 
 ```
 mcp-sequential-thinking/
-├── mcp_coaia_sequential_thinking/
+├── mcp_structural_sequential_thinking/
 │   ├── server.py       # Main server implementation and MCP tools
 │   ├── models.py       # Data models with Pydantic validation
 │   ├── storage.py      # Thread-safe persistence layer

@@ -28,21 +28,21 @@ try:
     )
 except ImportError:
     # When run directly
-    from mcp_coaia_sequential_thinking.models import ThoughtData, ThoughtStage
-    from mcp_coaia_sequential_thinking.storage import ThoughtStorage
-    from mcp_coaia_sequential_thinking.analysis import ThoughtAnalyzer
-    from mcp_coaia_sequential_thinking.logging_conf import configure_logging
-    from mcp_coaia_sequential_thinking.integration_bridge import integration_bridge
-    from mcp_coaia_sequential_thinking.co_lint_integration import validate_thought, ValidationSeverity
-    from mcp_coaia_sequential_thinking.creative_orientation_engine import analyze_creative_orientation
-    from mcp_coaia_sequential_thinking.tension_visualization import create_tension_visualization
-    from mcp_coaia_sequential_thinking.constitutional_core import constitutional_core, ConstitutionalPrinciple
-    from mcp_coaia_sequential_thinking.polycentric_lattice import (
+    from mcp_structural_sequential_thinking.models import ThoughtData, ThoughtStage
+    from mcp_structural_sequential_thinking.storage import ThoughtStorage
+    from mcp_structural_sequential_thinking.analysis import ThoughtAnalyzer
+    from mcp_structural_sequential_thinking.logging_conf import configure_logging
+    from mcp_structural_sequential_thinking.integration_bridge import integration_bridge
+    from mcp_structural_sequential_thinking.co_lint_integration import validate_thought, ValidationSeverity
+    from mcp_structural_sequential_thinking.creative_orientation_engine import analyze_creative_orientation
+    from mcp_structural_sequential_thinking.tension_visualization import create_tension_visualization
+    from mcp_structural_sequential_thinking.constitutional_core import constitutional_core, ConstitutionalPrinciple
+    from mcp_structural_sequential_thinking.polycentric_lattice import (
         agent_registry, ConstitutionalAgent, AnalysisAgent, 
         AgentRole, MessageType, MessagePriority
     )
-    from mcp_coaia_sequential_thinking.agent_coordination import task_coordinator, TaskType
-    from mcp_coaia_sequential_thinking.resilient_connection import (
+    from mcp_structural_sequential_thinking.agent_coordination import task_coordinator, TaskType
+    from mcp_structural_sequential_thinking.resilient_connection import (
         resilient_connection, NoveltySearchAgent, ExplorationMode, DiscoveryType
     )
 

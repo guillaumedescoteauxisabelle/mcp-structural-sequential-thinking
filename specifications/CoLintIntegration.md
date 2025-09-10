@@ -55,7 +55,7 @@ It enables the creation of:
 
 ### Technical Documentation Export
 
-#### **Module**: `mcp_coaia_sequential_thinking.colint_integration`
+#### **Module**: `mcp_structural_sequential_thinking.colint_integration`
 #### **Class**: `CoLintIntegration`
 
 This class encapsulates the logic for integrating `co-lint` functionality into the Sequential Thinking pipeline.

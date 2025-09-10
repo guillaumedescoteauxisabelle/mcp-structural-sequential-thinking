@@ -119,16 +119,16 @@ If the system supports "telescoping" action steps into sub-charts, the summary c
 
 Implementing these changes will require modifications across several components:
 
--   **`mcp_coaia_sequential_thinking/models.py`**:
+-   **`mcp_structural_sequential_thinking/models.py`**:
     -   Redefine `ThoughtStage` enum to reflect creative process elements (e.g., `DesiredOutcome`, `CurrentReality`, `StructuralTension`, `ActionStep`).
     -   Potentially add new fields to `ThoughtData` to capture specific metrics related to structural tension, action step completion, or bias reorientation.
--   **`mcp_coaia_sequential_thinking/analysis.py`**:
+-   **`mcp_structural_sequential_thinking/analysis.py`**:
     -   The `ThoughtAnalyzer` will need significant updates to interpret thoughts based on the new creative process elements.
     -   New analysis methods will be required to identify structural tension, track action step progress, and detect/quantify bias reorientation.
--   **`mcp_coaia_sequential_thinking/server.py`**:
+-   **`mcp_structural_sequential_thinking/server.py`**:
     -   The `process_thought` tool will need to adapt to the new `ThoughtStage` enum and any new `ThoughtData` fields.
     -   The `generate_summary` tool will call the updated `ThoughtAnalyzer` methods to produce the new summary format.
--   **`mcp_coaia_sequential_thinking/storage.py`**:
+-   **`mcp_structural_sequential_thinking/storage.py`**:
     -   Ensure compatibility with any changes to `ThoughtData` for persistence.
 -   **MCP Tool Definition**: The `generate_summary` tool's output schema will need to be updated in its definition for MCP clients.
 

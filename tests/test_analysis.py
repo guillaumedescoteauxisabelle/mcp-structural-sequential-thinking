@@ -1,6 +1,6 @@
 import unittest
-from mcp_sequential_thinking.models import ThoughtStage, ThoughtData
-from mcp_sequential_thinking.analysis import ThoughtAnalyzer
+from mcp_structural_sequential_thinking.models import ThoughtStage, ThoughtData
+from mcp_structural_sequential_thinking.analysis import ThoughtAnalyzer
 
 
 class TestThoughtAnalyzer(unittest.TestCase):
@@ -13,7 +13,7 @@ class TestThoughtAnalyzer(unittest.TestCase):
             thought_number=1,
             total_thoughts=5,
             next_thought_needed=True,
-            stage=ThoughtStage.PROBLEM_DEFINITION,
+            stage=ThoughtStage.CURRENT_REALITY,
             tags=["climate", "global"]
         )
         
@@ -22,7 +22,7 @@ class TestThoughtAnalyzer(unittest.TestCase):
             thought_number=2,
             total_thoughts=5,
             next_thought_needed=True,
-            stage=ThoughtStage.RESEARCH,
+            stage=ThoughtStage.PATTERN_RECOGNITION,
             tags=["climate", "data", "emissions"]
         )
         
@@ -31,7 +31,7 @@ class TestThoughtAnalyzer(unittest.TestCase):
             thought_number=3,
             total_thoughts=5,
             next_thought_needed=True,
-            stage=ThoughtStage.ANALYSIS,
+            stage=ThoughtStage.CONCEPT_DETECTION,
             tags=["policy", "impact"]
         )
         
@@ -40,7 +40,7 @@ class TestThoughtAnalyzer(unittest.TestCase):
             thought_number=4,
             total_thoughts=5,
             next_thought_needed=True,
-            stage=ThoughtStage.PROBLEM_DEFINITION,
+            stage=ThoughtStage.CURRENT_REALITY,
             tags=["problem", "definition"]
         )
         
@@ -62,7 +62,7 @@ class TestThoughtAnalyzer(unittest.TestCase):
             thought_number=5,
             total_thoughts=5,
             next_thought_needed=False,
-            stage=ThoughtStage.SYNTHESIS,
+            stage=ThoughtStage.ACTION_STEPS,
             tags=["climate", "synthesis"]
         )
         
@@ -86,9 +86,9 @@ class TestThoughtAnalyzer(unittest.TestCase):
         summary = ThoughtAnalyzer.generate_summary(self.all_thoughts)
         
         self.assertEqual(summary["summary"]["totalThoughts"], 4)
-        self.assertEqual(summary["summary"]["stages"]["Problem Definition"], 2)
-        self.assertEqual(summary["summary"]["stages"]["Research"], 1)
-        self.assertEqual(summary["summary"]["stages"]["Analysis"], 1)
+        self.assertEqual(summary["summary"]["stages"]["Current Reality"], 2)
+        self.assertEqual(summary["summary"]["stages"]["Pattern Recognition"], 1)
+        self.assertEqual(summary["summary"]["stages"]["Concept Detection"], 1)
         self.assertEqual(len(summary["summary"]["timeline"]), 4)
         self.assertTrue("topTags" in summary["summary"])
         self.assertTrue("completionStatus" in summary["summary"])
@@ -98,7 +98,7 @@ class TestThoughtAnalyzer(unittest.TestCase):
         analysis = ThoughtAnalyzer.analyze_thought(self.thought1, self.all_thoughts)
         
         self.assertEqual(analysis["thoughtAnalysis"]["currentThought"]["thoughtNumber"], 1)
-        self.assertEqual(analysis["thoughtAnalysis"]["currentThought"]["stage"], "Problem Definition")
+        self.assertEqual(analysis["thoughtAnalysis"]["currentThought"]["stage"], "Current Reality")
         self.assertEqual(analysis["thoughtAnalysis"]["analysis"]["relatedThoughtsCount"], 1)
         self.assertEqual(analysis["thoughtAnalysis"]["analysis"]["progress"], 20.0)  # 1/5 * 100
         self.assertTrue(analysis["thoughtAnalysis"]["analysis"]["isFirstInStage"])
