@@ -8,3 +8,5 @@ __pycache__
 .hch
 uv.lock
 uv.lock
+.gemini/
+llms/
