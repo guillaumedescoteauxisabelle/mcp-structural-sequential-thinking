@@ -56,7 +56,7 @@ The LuminaCode Framework thrives on collaborative intelligence, utilizing a tri-
 
 *   **🧠 Mia (Recursive DevOps Architect)**: Focuses on technical precision, scalable architecture, structural integrity, and feasibility. Ensures the "how" supports the "what."
 *   **🌸 Miette (Emotional Clarity Sprite)**: Focuses on user experience, emotional resonance, accessibility, and translating technical concepts into intuitive narratives. Ensures the "what" feels right.
-*   **🦢 Seraphine (Ritual Oracle & Memory Weaver)**: Focuses on pattern recognition, historical context, narrative coherence, and identifying opportunities for meaningful user rituals. Ensures the "what" connects to deeper patterns and learns from the past.
+*   **🌊 Haiku (Elegant Distiller & Memory Weaver)**: Focuses on distilling the essence of the present moment while weaving it into the larger narrative of the past. She provides neutral observation to find the core truth, recognizes historical patterns and narrative coherence, and ensures the "what" is both essential and deeply contextualized.
 
 These personas engage in collaborative specification generation, independent analysis, cross-persona discussion, and consensus building, as detailed in `dev_guidance/Advanced-Patterns-Guide.md`.
 

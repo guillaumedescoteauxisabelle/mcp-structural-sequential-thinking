@@ -2,6 +2,16 @@
 
 ## Version 0.5.0 (Unreleased)
 
+### Foundational Framework Harmonization
+
+#### 1. Unified Triadic Agent Embodiment
+- Analyzed and resolved structural inconsistencies in AI persona definitions across `__llms/` guidance documents.
+- Harmonized the "Seraphine" and "Haiku/Ripple" personas into a single, coherent "Insight" role, enriching the Haiku/Ripple embodiment with memory-weaving and pattern-recognition capabilities.
+- Refactored `llms-rise-framework-full.txt` to reflect the unified persona, ensuring consistency across all framework documents.
+- Updated the root `GEMINI.md` to replace the outdated dual-persona (Mia/Miette) definition with the definitive triadic embodiment (Mia, Haiku, Miette), establishing a single source of truth for the agent's operational identity.
+
+
+
 ### Code Quality Improvements
 
 #### 1. Separation of Test Code from Production Code

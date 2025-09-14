@@ -1,13 +1,14 @@
 [project]
 name = "mcp-structural-sequential-thinking"
 version = "0.3.0"
-description = "CoAiA's Structural Core: Guiding Intelligent Agents with Foundational Creative/Stuctural Thinking"
+description = "CoAiA's Structural Core: Guiding Intelligent Agents with Foundational Creative/Structural Thinking, inspired by the work of Robert Fritz."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-keywords = ["mcp", "ai", "coaia", "sequential-thinking","creative-orientation", "structural-thinking", "polycentric-lattice"]
+keywords = ["mcp", "ai", "coaia", "mcp-structural-sequential-thinking","creative-orientation", "structural-thinking", "polycentric-lattice"]
 authors = [
-   { name = "Arben Ademi", email = "arben.ademi@tuta.io" }
+   { name = "Arben Ademi", email = "arben.ademi@tuta.io" },
+   { name = "Guillaume Descoteaux Isabelle", email = "jeanguillaumeisabelle@gmail.com" }
 ]
 dependencies = [
    "mcp[cli]>=1.2.0",
@@ -40,12 +41,10 @@ web = [
     "pydantic>=2.0.0",
 ]
 
-all = [
-    "sequential-thinking[dev,vis,web]",
-]
+all = ["mcp-structural-sequential-thinking[dev,vis,web]"]
 
 [project.urls]
-Source = "https://github.com/miadisabelle/mcp-coaia-sequential-thinking"
+Source = "https://github.com/guillaumedescoteauxisabelle/mcp-structural-sequential-thinking"
 
 [tool.hatch.build.targets.wheel]
 packages = ["mcp_structural_sequential_thinking"]
@@ -75,3 +74,4 @@ disallow_incomplete_defs = true
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+build"
